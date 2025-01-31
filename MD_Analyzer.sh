@@ -25,7 +25,7 @@ function instrucoes_uso() {
     echo "===================================================="
 }
 
-# Exibe a versão do script
+
 function versao() {
     echo -e "${YELLOW}**MD Analyzer** - versão 1.1${NC}"
 }
@@ -48,7 +48,7 @@ function baixar_e_analisar() {
     fi
 }
 
-# Função para analisar metadados de arquivos ou diretórios locais
+
 function analisar_metadados() {
     if [ -z "$1" ]; then
         echo -e "${RED}Erro: Nenhum arquivo, diretório ou link fornecido.${NC}"
@@ -56,7 +56,7 @@ function analisar_metadados() {
     fi
 
     if [[ "$1" =~ ^https?:// ]]; then
-        # Se for um link, baixa o arquivo e analisa
+      
         baixar_e_analisar "$1"
     elif [ -d "$1" ]; then
         echo -e "${GREEN}Analisando todos os arquivos no diretório: $1${NC}"
